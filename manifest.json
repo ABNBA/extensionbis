@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Ouvrir Onglets",
+  "version": "1.0",
+  "description": "Extension Chrome pour ouvrir des onglets et des groupes d'onglets.",
+  "action": {
+    "default_popup": "popup.html",  
+    "default_icon": {
+      "16": "images/16.png",
+      "48": "images/48.png",
+      "128": "images/128.png"
+    }
+  },
+  "permissions": [
+    "tabs",
+    "tabGroups",
+    "storage"
+  ],
+  "icons": {
+    "16": "images/16.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "settings.html"
+}

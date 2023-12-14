@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes Paramètres</title>
+  <link rel="stylesheet" href="settings.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      padding: 20px;
+      background-color: #E3E3E3;
+      color: #333;
+    }
+
+    h1 {
+      color: #F5945F;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      margin-bottom: 16px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #5B7554;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #4CAF50;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .link-list-item {
+      display: flex;
+      align-items: center;
+    }
+
+    .link-list-item input {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mes Paramètres</h1>
+
+  <label for="newGroupName">Nouveau Groupe :</label>
+  <input type="text" id="newGroupName">
+  <button id="createGroup">Créer un Groupe</button>
+
+  <label for="selectGroup">Choisir un Groupe :</label>
+  <select id="selectGroup"></select>
+
+  <label for="newLink">Nouveau Lien :</label>
+  <input type="text" id="newLink">
+  <button id="addLink">Ajouter un Lien</button>
+
+  <h2>Liens du Groupe :</h2>
+  <ul id="linkList"></ul>
+
+  <button id="removeLink">Supprimer les Liens Sélectionnés</button>
+  <button id="renameGroup">Renommer le Groupe</button>
+  <button id="deleteGroup">Supprimer le Groupe</button>
+  <button id="saveSettings">Enregistrer les Paramètres</button>
+<div id="menuButtons"></div>
+
+<script src="utils.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extension Popup</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      padding: 20px;
+      text-align: center;
+      background-color: #E3E3E3; /* Fond beige */
+      color: #5B7554; /* Couleur de texte par défaut */
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+      background-color: #F5945F; /* Orange par défaut */
+      color: white;
+      border: none;
+      border-radius: 5px;  
+    }
+
+    button:hover {
+      background-color: #5B7554; /* Vert au survol */
+    }
+
+    /* Styles pour les boutons de sélection de thème */
+    .theme-button {
+      width: 5px;
+      height: 5px;
+      margin: 3px;
+      cursor: pointer;
+      border: 1px solid black;
+      border-radius: 5px;
+      display: inline-block !important; /* Ajout de !important */
+    }
+
+    #selectWhiteTheme {
+      background-color: #E3E3E3; /* Beige par défaut */
+      color: white;
+    }
+    #selectWhiteTheme:hover {
+      background-color: #E3E3E3; /* Beige par défaut */
+    }
+
+    #selectGreenTheme {
+      background-color: #80ED99; /* Vert par défaut */
+      color: white;
+    }
+
+    #selectGreenTheme:hover {
+      background-color: #57CC99; /* Vert au survol */
+    }
+
+    #selectOrangeTheme {
+      background-color: #ed930c; /* Orange par défaut */
+      color: white;
+    }
+
+    #selectOrangeTheme:hover {
+      background-color: #e07d0c; /* Orange au survol */
+    }
+
+    #selectBlueTheme {
+      background-color: #023E8A; /* Bleu par défaut */
+      color: white;
+    }
+
+    #selectBlueTheme:hover {
+      background-color: #023E8A; /* Bleu au survol */
+    }
+
+    /* Styles pour les thèmes */
+
+    .white-theme {
+      background-color: #E3E3E3;
+      color: #465940;
+    }
+
+    .white-theme button {
+      background-color: #F5945F;
+      color: white;  
+    }
+
+    .white-theme button:hover {
+      background-color: #5B7554;
+    }
+
+    .green-theme {
+      background-color: #C7F9CC;
+      color: white;
+    }
+
+    .green-theme button {
+      background-color: #80ED99;
+      color: white;
+    }
+
+    .green-theme button:hover {
+      background-color: #57CC99;
+    }
+
+    .orange-theme {
+      background-color: #ed930c;
+      color: white;
+    }
+
+    .orange-theme button {
+      background-color: #e07d0c;
+      color: white;
+    }
+
+    .blue-theme {
+      background-color: #90E0EF;
+      color: white;
+    }
+
+    .blue-theme button {
+      background-color: #00B4D8;
+      color: white;
+    }
+
+    .blue-theme button:hover {
+      background-color: #0096C7;
+    }
+
+ #openSettings {
+      padding: 10px;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+      background-color: #5B7554; /* Vert foncé par défaut */
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #openSettings:hover {
+      background-color: #3A5240; /* Vert foncé au survol */
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Ma Super Extension</h1>
+  <button id="openSingleTabs">Ouvrir les Onglets</button>
+  <button id="openTabGroup">Ouvrir le Groupe d'Onglets</button>
+  <button id="openAllTabs">Ouvrir Tout</button>
+  <button id="selectWhiteTheme" class="theme-button" data-theme="white"></button>
+  <button id="selectGreenTheme" class="theme-button" data-theme="green"></button>
+  <button id="selectOrangeTheme" class="theme-button" data-theme="orange"></button>
+  <button id="selectBlueTheme" class="theme-button" data-theme="blue"></button>
+ <button id="openSettings">Paramètres</button>
+ <div id="groupButtons"></div>
+<script src="utils.js"></script>
+<script src="settings.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>
